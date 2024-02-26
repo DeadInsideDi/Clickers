@@ -1,6 +1,5 @@
-import time,threading
 from myLib.userEvents import KeyboardListener, MouseController, Button
-
+import time,threading
 
 
 delay = 0.0000001
