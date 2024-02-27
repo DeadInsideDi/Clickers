@@ -38,7 +38,7 @@ mouse = MouseController()
 click_thread = ClickMouse(delay, button)
 click_thread.start()
 
-def on_press(key):
+def on_release(key):
   if key == start_stop_key:
     if click_thread.running: click_thread.stop_clicking()
     else: click_thread.start_clicking()        
@@ -47,4 +47,4 @@ def on_press(key):
     keyboardListener.terminate()
 
 
-keyboardListener = KeyboardListener(on_release=on_press,auto_start=True)
+keyboardListener = KeyboardListener(on_release=on_release,auto_start=True)
